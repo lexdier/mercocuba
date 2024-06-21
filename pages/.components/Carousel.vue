@@ -7,17 +7,14 @@ import carousel from '@/public/assets/images/carousel.png'
     <v-col cols="12">
       <v-carousel hide-delimiters class="h-100 w-100">
         <v-carousel-item
-            height="800"
             :src="carousel"
         />
 
         <v-carousel-item
-            height="800"
             :src="carousel"
         />
 
         <v-carousel-item
-            height="800"
             :src="carousel"
         />
       </v-carousel>
