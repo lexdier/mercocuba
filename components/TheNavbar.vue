@@ -1,19 +1,37 @@
 <script setup lang="ts">
 import logo from '../public/assets/images/logo.jpg'
+
+const items = ['text', 'text', 'text longer', 'text even more longer']
 </script>
 
 <template>
   <nav class="bg-black">
     <v-container>
       <v-row align="center">
-        <v-col cols="3" class="d-flex align-center">
+        <v-col lg="3" class="d-flex align-center">
           <v-img class="w-25" height="150" :src="logo"/>
         </v-col>
 
-        <v-col cols="8" class="d-flex align-center">
-          <v-text-field variant="solo" placeholder="Buscar productos...">
-            <template v-slot:append class="ma-0 pa-0">
-              <v-icon size="60" icon="mdi-magnify"></v-icon>
+        <v-col lg="8" class="d-flex align-center">
+          <v-text-field
+              hide-details
+              label="Buscar productos"
+              variant="solo"
+              class="w-100"
+          >
+            <template v-slot:prepend>
+              <v-select
+                  variant="solo"
+                  :items="items"
+              >
+                <template v-slot:label clas="w-100">
+                  Todos
+                </template>
+              </v-select>
+            </template>
+
+            <template v-slot:append>
+              <v-icon icon="mdi-magnify" class="bg-blue rounded" size="80"/>
             </template>
           </v-text-field>
         </v-col>
@@ -23,12 +41,12 @@ import logo from '../public/assets/images/logo.jpg'
 
   <nav class="border-b elevation-2">
     <v-container>
-      <v-row>
-        <v-col cols="9">
+      <v-row align="center">
+        <v-col>
           <v-btn icon="mdi-home" class="rounded" color="blue"/>
         </v-col>
 
-        <v-col class="d-flex justify-space-between">
+        <v-col cols="auto" class="d-flex justify-space-between">
           <v-btn size="x-large" icon="mdi-account-circle" variant="plain"/>
           <v-btn size="x-large" icon="mdi-heart" variant="plain"/>
           <v-btn size="x-large" icon="mdi-cart" variant="plain"/>

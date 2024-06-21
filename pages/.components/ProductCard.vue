@@ -3,9 +3,9 @@ import product from '@/public/assets/images/product.png'
 </script>
 
 <template>
-    <v-card class="pa-5">
+    <v-card class="pa-5 elevation-5 rounded">
       <v-row>
-        <v-col cols="12" class="d-flex">
+        <v-col cols="12">
           <v-img
               rounded
               :src="product"

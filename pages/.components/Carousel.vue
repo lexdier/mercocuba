@@ -5,7 +5,7 @@ import carousel from '@/public/assets/images/carousel.png'
 <template>
   <v-row>
     <v-col cols="12">
-      <v-carousel hide-delimiters class="h-100">
+      <v-carousel hide-delimiters class="h-100 w-100">
         <v-carousel-item
             height="800"
             :src="carousel"
@@ -24,17 +24,17 @@ import carousel from '@/public/assets/images/carousel.png'
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row class="py-5">
     <v-col cols="12" class="text-center">
       <div class="flex flex-column">
-        <h2>BIENVENIDO A NUESTRA TIENDA</h2>
+        <span class="text-lg-h2 text-blue">BIENVENIDO A NUESTRA TIENDA</span>
 
-        <div class="pt-5">
-          <v-btn class="me-5" size="large">
+        <div class="pt-5 d-flex justify-center">
+          <v-btn class="me-5" color="blue">
             <span>Mas vendidos</span>
           </v-btn>
 
-          <v-btn size="large">
+          <v-btn  color="blue">
             <span>Mas vistos</span>
           </v-btn>
         </div>
